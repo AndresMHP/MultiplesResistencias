@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Circuitos en Serie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Circuitos en Serie</h1>
+
+        <!-- Paso 1: Ingresar voltaje -->
+        <div id="paso1">
+            <label for="voltaje">Voltaje (V):</label>
+            <input type="number" id="voltaje" required>
+            <button onclick="ingresarVoltaje()">Continuar</button>
+        </div>
+
+        <!-- Paso 2: Ingresar número de resistencias -->
+        <div id="paso2" style="display: none;">
+            <label for="numResistencias">Número de resistencias:</label>
+            <input type="number" id="numResistencias" required>
+            <button onclick="ingresarNumResistencias()">Continuar</button>
+        </div>
+
+        <!-- Paso 3: Ingresar valores de resistencias -->
+        <div id="paso3" style="display: none;">
+            <div id="resistencias"></div>
+            <button onclick="calcular()">Calcular</button>
+        </div>
+
+        <!-- Resultados -->
+        <div id="resultado" style="display: none;">
+            <p>Corriente total: <span id="corriente"></span> A</p>
+            <p>Potencia total: <span id="potencia"></span> W</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
